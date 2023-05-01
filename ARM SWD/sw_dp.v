@@ -1,5 +1,8 @@
 /*------------------------------------------------------------------------------
  CMSIS-DAP SW DP I/O
+
+ Version 1.0 @ 2023/05/01
+    1. Initial version
 --------------------------------------------------------------------------------*/
 
 module sw_dp(
@@ -361,7 +364,7 @@ begin
   SWJ_Sequence(32'hE3DD_AFE9, 32);
   SWJ_Sequence(32'h19BC_0EA2, 32);
 
-  /* 4 SWD dummy clock cycles 0bxxxx, switch to next state */
+  /* 4 SWD dummy clock cycles 0b0000, switch to next state */
   SWJ_Sequence(32'h0000_0000, 4);
 
   /* Activation code 0b0101_1000 (ARM CoreSight SW-DP), LSB is 8'h1A. */
