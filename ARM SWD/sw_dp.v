@@ -354,7 +354,7 @@ endtask
 task automatic SWJ_Dormant_To_SWD;
 begin
   /* At least 8 SWD clock cycles with SWDIO high */
-  SWJ_Sequence(32'h0000_0000, 8);
+ SWJ_Sequence(32'hFFFF_FFFF, 8);
 
   /* Selection Alert sequence
   0x49CF9046 A9B4A161 97F5BBC7 45703D98 transmitted MSB first.
